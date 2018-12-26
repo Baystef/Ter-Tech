@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>TT</title>
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_XiRgX0hWAScCjiNrA6LA7");
+        })();
+    </script>
+</head>
+
+<body>
+    <h3 class="welcome-text hidden"></h3>
+    <main class="container">
+        <form action="" class="newStaff" method="POST">
+            <div class="name">
+                <label for="firstName">First Name</label>
+                <input type="text" required id="firstName" placeholder="John">
+            </div>
+            <div class="surname">
+                <label for="lastName">Last Name</label>
+                <input type="text" required id="lastName" placeholder="Doe">
+            </div>
+            <div class="mail">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required placeholder="example@mail.com">
+            </div>
+            <div class="sex">
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="birthday">
+                <label for="dateOfBirth">Date of Birth</label>
+                <input type="date" name="dateOfBirth" id="dateOfBirth" required placeholder="10-11-12">
+            </div>
+            <div class="telephone">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="08012345678">
+            </div>
+            <button type="submit" class="submitButton">Sign Up</button>
+            <h5 class="have-account">Already have an account?<a class="login-link" onclick="redirect()">Login</a></h5>
+        </form>
+    </main>
+   
+    <section class="login-form hidden">
+        <form class="login">
+            <span>Secret ID</span>
+            <input type="password" class="secret-id" placeholder="s+************">
+            <button type="submit" class="login-button">Login</button>
+            <h5 class="have-account">Don't have an account?<a class="login-link" onclick="signUp()">Signup</a></h5>
+        </form>
+    </section>
+
+    <section class="profile-info hidden">
+        <h1 class="profile-info__header">Profile Information</h1>
+        <div class="profile">
+
+        </div>
+
+    </section>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
