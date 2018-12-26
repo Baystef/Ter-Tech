@@ -115,6 +115,7 @@ loginButton.addEventListener('click',  function(e) {
     };
 
     loginForm.classList.add('hidden');
+    welcome.classList.add('hidden');
     profileInfo.classList.remove('hidden');
 
     profile.innerHTML = `<span class="profile-span">Name:</span> <p>${result.name}</p><br/> 
