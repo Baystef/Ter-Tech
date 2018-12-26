@@ -36,7 +36,6 @@ class Staff {
     };
 
     welcome() {
-        console.log(`Welcome ${this.name} ${this.surname}, check your email for your secret ID`);
         return `Welcome ${this.name} ${this.surname}, check your email for your secret ID. Click <a class="login-link" onclick="redirect()">here</a> to continue`;
     };
 };
@@ -65,9 +64,6 @@ form.addEventListener('submit', function (e) {
 
     welcome.classList.remove('hidden');
     welcome.innerHTML = staff.welcome();
-
-    let staffID = staff._id
-    console.log(staffID);
 
     form.reset();
 
